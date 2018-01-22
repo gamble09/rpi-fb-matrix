@@ -50,7 +50,7 @@ Config::Config(rgb_matrix::RGBMatrix::Options *options,
     _display_width = getWithDefault(root, "display_width",
                                     getPanelWidth() * getChainLength());
     _display_height = getWithDefault(root, "display_height",
-                                     getPanelHeight() * getParallelCount());
+                                     getPanelHeight() * 2 * getParallelCount());
 
     // Load optional crop_origin value.
     if (root.exists("crop_origin")) {
